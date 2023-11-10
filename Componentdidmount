@@ -2,3 +2,12 @@ It's a special jsx function ised in react which always runs after rendering is d
 
 
 
+componentDidMount()
+{
+  console.log("this will run after render");
+   let url="https://newsapi.org/v2/everything?q=tesla&from=2023-10-10&sortBy=publishedAt&apiKey=47b5bc1a3de04f40b657feac3f6a043d";
+  
+   let data= fetch(url);
+   // fetch returns promise and uses async await
+
+}
