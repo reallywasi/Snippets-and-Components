@@ -1,3 +1,3 @@
           this.state.articles.map((element)=>{console.log(element)})
 
-articles is the array containing JSON for the API sample output
+articles is the array containing JSON for the API sample output.
