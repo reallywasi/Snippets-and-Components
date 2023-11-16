@@ -1,0 +1,16 @@
+import {motion} from "framer-motion"
+   <div>
+            <motion.h1
+            initial={
+                {
+                    x:"-100%",
+                    opacity:0,
+                }
+            }
+whileInView={{
+    x:0, opacity:1
+}}
+
+            >Hii my blood Palestine
+            </motion.h1>
+        </div>
