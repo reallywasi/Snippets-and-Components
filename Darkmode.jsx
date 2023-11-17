@@ -13,6 +13,7 @@ function App() {
     });
   };
 
+  
   const appStyle = {
     background: darkMode ? '#333' : '#fff',
     color: darkMode ? '#fff' : '#333',
