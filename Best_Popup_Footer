@@ -14,7 +14,12 @@ import {
   
   import React from 'react'
   
-
+  import {
+    FormControl,
+    FormLabel,Input,
+    FormErrorMessage,
+    FormHelperText,
+  } from '@chakra-ui/react'
   
   function PlacementExample() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -26,12 +31,13 @@ import {
           <Stack direction='row' mb='4'>
             {/* <Radio value='top'>Top</Radio>
             <Radio value='right'>Right</Radio> */}
-            <Radio value='bottom'>Bottom</Radio>
+            {/* <Radio value='bottom'></Radio> */}
             {/* <Radio value='left'>Left</Radio> */}
           </Stack>
         </RadioGroup>
-        <Button colorScheme='blue' onClick={onOpen}>
-          Wasi
+        <Button colorScheme='blue' onClick={onOpen} px={100}>
+        Coded at Night under Caffeine by Wasi
+
         </Button>
         <Drawer placement={'bottom'} onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay />
@@ -55,7 +61,28 @@ import {
 
 
     <center>
+    <p>Hii I am a freelance Software Developer and a Computer Science Undergrad.</p>
       <p>Connect With me</p>
+      <FormControl isRequired w={500}>
+      <FormLabel>Name</FormLabel>
+  <Input type='Text' />
+  <FormLabel>Email address</FormLabel>
+  <Input type='email' />
+  <FormHelperText>We'll never share your email.</FormHelperText>
+  <FormLabel>Message</FormLabel>
+  <Input type='text' h={200} />
+  <Button
+            colorScheme='teal'
+            type='submit'
+            my={3}
+            px={6}
+          >
+            Submit
+          </Button>
+</FormControl>
+
+
+
       <p>
         <a
           href="https://www.instagram.com"
