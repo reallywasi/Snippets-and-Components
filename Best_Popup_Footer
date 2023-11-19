@@ -1,0 +1,106 @@
+
+import {
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,Radio,Button,
+    DrawerCloseButton,Stack,RadioGroup,useDisclosure
+  } from '@chakra-ui/react'
+
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+  
+  import React from 'react'
+  
+
+  
+  function PlacementExample() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const [placement, setPlacement] = React.useState('right')
+  
+    return (
+      <>
+        <RadioGroup defaultValue={placement} onChange={setPlacement}>
+          <Stack direction='row' mb='4'>
+            {/* <Radio value='top'>Top</Radio>
+            <Radio value='right'>Right</Radio> */}
+            <Radio value='bottom'>Bottom</Radio>
+            {/* <Radio value='left'>Left</Radio> */}
+          </Stack>
+        </RadioGroup>
+        <Button colorScheme='blue' onClick={onOpen}>
+          Wasi
+        </Button>
+        <Drawer placement={'bottom'} onClose={onClose} isOpen={isOpen}>
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader borderBottomWidth='1px'><center>Coded at Night under Caffeine by Wasi</center></DrawerHeader>
+            <DrawerBody>
+            {/* <center>
+      <p>Connect With me</p>
+      <p>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faInstagram} style={{fontSize: '24px'}}/>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faLinkedin}  style={{marginLeft:'1.5rem', marginRight:'1.5rem', fontSize: '24px'}}  />
+        </a>
+        <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faGithub}  style={{fontSize: '24px', transition: 'red 0.3s' }} />
+        </a>
+      </p>
+    </center> */}
+
+
+    <center>
+      <p>Connect With me</p>
+      <p>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon
+            icon={faInstagram}
+            style={{ fontSize: '24px', transition: 'color 0.3s' }}
+            className="social-icon"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            style={{
+              marginLeft: '1.5rem',
+              marginRight: '1.5rem',
+              fontSize: '24px',
+              transition: 'color 0.3s',
+            }}
+            className="social-icon"
+          />
+        </a>
+        <a
+          href="https://www.github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon
+            icon={faGithub}
+            style={{ fontSize: '24px', transition: 'red 0.3s' }}
+            className="social-icon"
+          />
+        </a>
+      </p>
+    </center>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </>
+    )
+  }
+  export default PlacementExample;
